@@ -950,7 +950,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-20 px-6 bg-black">
-        <AnimatedSection className="max-w-5xl mx-auto">
+        <AnimatedSection className="max-w-[1600px] mx-auto">
           <div className="bg-black border-2 border-red-600/30 p-12 text-center text-white shadow-2xl shadow-red-600/10">
             <div className="inline-block bg-red-600 text-white px-6 py-2 border border-red-500 font-bold text-xs mb-6 uppercase tracking-widest">
               Limited Availability • {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
