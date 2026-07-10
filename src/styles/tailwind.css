@@ -1,2 +1,62 @@
 @import 'tailwindcss';
 @source '../**/*.{js,ts,jsx,tsx}';
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes pulse-core {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes pulse-radar {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+.pulse-core-circle {
+  fill: #dc2626;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse-core 2.8s ease-in-out infinite;
+}
+
+.pulse-radar-circle {
+  fill: rgba(220, 38, 38, 0.5);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse-radar 2.8s ease-in-out infinite;
+}
