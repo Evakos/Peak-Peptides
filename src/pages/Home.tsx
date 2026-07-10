@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Check, Zap, Clock, Shield, X } from 'lucide-react';
+import { ArrowRight, Check, Zap, Clock, Shield, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection } from '../components/Animated';
@@ -118,35 +118,48 @@ export default function Home() {
             <div>
             <div className="grid md:grid-cols-3 gap-5 mt-8 lg:mt-0">
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Training plateaus despite perfect programming</p>
             </div>
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Recovery time killing your training frequency</p>
             </div>
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Stubborn fat despite single-digit body fat goals</p>
             </div>
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Age stealing your performance edge</p>
             </div>
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Joint pain limiting your intensity</p>
             </div>
             <div className="relative flex items-center min-h-[300px] bg-black/85 border border-black hover:border-white/40 transition-colors p-8">
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/40" />
+              <svg viewBox="0 0 24 24" className="absolute top-3 right-3 w-6 h-6 fill-red-500">
+                <polygon points="12,3 21,3 21,12" />
+              </svg>
               <p className="text-gray-200 text-lg">Natural limits holding you back</p>
             </div>
           </div>
 
 
-          <div className="text-center mt-12 pt-8 border-t border-black/30 relative z-10">
-            <p className="text-black/70 mb-2 uppercase tracking-wide">Your genetics aren't the problem.</p>
-            <p className="text-xl font-bold text-white uppercase tracking-wide">Your <span className="text-black">protocol</span> is.</p>
+          <div className="mt-12 pt-8 border-t border-black/30 relative z-10 flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-black/70 uppercase tracking-wide whitespace-nowrap">Your genetics aren't the problem.</p>
+            <div className="hidden sm:block flex-1 h-px bg-black/30"></div>
+            <p className="text-xl font-bold text-white uppercase tracking-wide whitespace-nowrap">Your <span className="text-black">protocol</span> is.</p>
           </div>
             </div>
           </div>
@@ -811,7 +824,7 @@ export default function Home() {
 
       {/* Guarantee Section */}
       <section className="relative py-20 px-6 bg-gradient-to-b from-red-700 via-red-600 to-red-800 overflow-hidden">
-        <AnimatedSection className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12">
+        <AnimatedSection className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 xl:px-20">
           <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12 items-center">
             <div className="flex items-center justify-center mb-12 lg:mb-0 lg:h-full">
               <div className="text-center lg:text-left lg:-rotate-90 lg:whitespace-nowrap">
@@ -824,14 +837,14 @@ export default function Home() {
 
             <div className="text-center lg:text-left">
               <div className="w-20 h-20 bg-black/20 border border-black/30 flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                <img src="/icons/shield-white.svg" alt="" className="w-10 h-10" />
+                <Shield className="w-9 h-9 text-white" strokeWidth={1.25} />
               </div>
-              <p className="text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-white/90 mb-8 leading-relaxed text-lg">
                 Try the protocol completely <span className="font-bold text-white">risk-free for 60 days</span>. If you don't see measurable gains,
                 or if you're not completely satisfied for ANY reason, we'll refund every penny.
                 No questions asked. No hassles.
               </p>
-              <div className="max-w-2xl mx-auto lg:mx-0">
+              <div>
                 <p className="text-sm text-gray-300 uppercase tracking-widest mb-6">
                   What This Means:
                 </p>
